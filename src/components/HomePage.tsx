@@ -24,14 +24,14 @@ const services = [
 ];
 
 const products = [
-  { name: "TPS 360c", tag: "Compact biometric terminal for retail and field agents." },
-  { name: "TPS 900", tag: "High-performance fingerprint verification terminal." },
-  { name: "TPS 980", tag: "Facial recognition terminal for premium access control." },
-  { name: "TPS 950", tag: "Facial recognition with dual-camera liveness detection." },
-  { name: "TPS 550s", tag: "Integrated-camera terminal for enrolment and verification." },
-  { name: "TPS 470", tag: "Rugged biometric tablet for mobile field operations." },
-  { name: "TPS 550", tag: "Reliable multi-modal verification workhorse." },
-  { name: "TPS 350", tag: "Entry-level, cost-effective fingerprint device." },
+  { name: "TPS 360c", tag: "Handheld fingerprint terminal for 1:1 NADRA verification.", img: "https://www.securetech-consultancy.com/assets/images/products/360.png" },
+  { name: "TPS 900", tag: "High-performance handheld fingerprint verification terminal.", img: "https://www.securetech-consultancy.com/assets/images/products/900.png" },
+  { name: "TPS 980", tag: "Facial recognition terminal for access control and MFS.", img: "https://www.securetech-consultancy.com/assets/images/products/980.png" },
+  { name: "TPS 950", tag: "Facial recognition device with high-throughput matching.", img: "https://www.securetech-consultancy.com/assets/images/products/950.png" },
+  { name: "TPS 550s", tag: "Handheld terminal with integrated camera for photograph capture.", img: "https://www.securetech-consultancy.com/assets/images/products/550s.png" },
+  { name: "TPS 470", tag: "Rugged biometric tablet for mobile field operations.", img: "https://www.securetech-consultancy.com/assets/images/products/470.png" },
+  { name: "TPS 550", tag: "Reliable handheld biometric verification workhorse.", img: "https://www.securetech-consultancy.com/assets/images/products/550.png" },
+  { name: "TPS 350", tag: "Compact, cost-effective handheld fingerprint device.", img: "https://www.securetech-consultancy.com/assets/images/products/350.png" },
 ];
 
 const industries = [
@@ -47,24 +47,28 @@ const caseStudies = [
   {
     tag: "Telecom",
     title: "Biometric-Based SIM Issuance",
-    body: "NADRA-integrated retailer and device verification enabling nationwide compliant SIM activation across leading operators.",
+    body: "Turnkey front-end and NADRA-integrated middleware for real-time SIM verification and issuance — retailer, device and fingerprint management.",
     img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=70",
   },
   {
     tag: "Elections",
     title: "Biometric Voter Verification",
-    body: "Pakistan's first HSM-secured biometric polling pilot deployed for the NA-120 by-election with real-time authentication.",
+    body: "HSM-secured voter verification device deployed for Pakistan's first biometric-verified polling pilot (NA-120, Election Commission of Pakistan).",
     img: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=70",
   },
   {
-    tag: "Banking",
-    title: "Smart Debit Card, Iraq",
-    body: "National smart debit card programme integrating biometrics for secure issuance, activation and transaction authorization.",
+    tag: "Banking · Iraq",
+    title: "Smart Debit Card System",
+    body: "End-to-end biometric-enabled payment programme for International Smart Card — enrolment, POS integration and secure disbursement of government grants.",
     img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=70",
   },
 ];
 
-const customers = ["Ufone", "Jazz", "Zong", "Telenor", "Warid", "PTCL", "PTA", "PITB", "Pakistan Army", "Govt. of Pakistan", "NayaPay", "Karandaz"];
+const customers = [
+  "Ufone", "Jazz", "Zong", "Telenor", "Warid", "PTCL",
+  "PTA", "PITB", "Pakistan Army", "Govt. of Pakistan", "U Bank", "NSRP",
+  "IPRS Kenya", "KPLC Kenya", "ISC Iraq", "Korek Telecom", "Ministry of Interior, Sudan", "PMD",
+];
 
 const testimonials = [
   { quote: "Their biometric verification stack has been the backbone of our nationwide SIM compliance operations for years — rock solid and fast.", role: "Telecom Operations Director" },
@@ -80,11 +84,15 @@ const awards = [
 ];
 
 const timeline = [
-  { year: "2009", title: "Founded in Islamabad", body: "Secure Tech Consultancy opens its doors, focused on identity and security systems integration." },
-  { year: "2011", title: "Iraq & Pakistan Army programmes", body: "National Entitlement enrolment system in Iraq and Smart Card ID for Pakistan Army delivered." },
-  { year: "2012", title: "Kenya Population Registration", body: "Consultancy engagement for national population registration modernization." },
-  { year: "2017", title: "Biometric polling pilot", body: "First-ever biometric-verified polling pilot in Pakistan with the Election Commission of Pakistan." },
-  { year: "2020", title: "New HQ, Islamabad", body: "Groundbreaking of the new Secure Tech headquarters — a hub for R&D and delivery." },
+  { year: "2009", title: "Founded in Islamabad", body: "Secure Tech Consultancy opens its doors with a mission to solve business challenges with identity and security technology." },
+  { year: "2011", title: "Iraq & Pakistan Army programmes", body: "Enrolment software and system integration for Iraq's National Entitlement Program; Smart Card ID system delivered for Pakistan Army." },
+  { year: "2012", title: "Kenya Population Registration", body: "Consultancy services for Kenya's Integrated Population Registration System (Ministry of State for Immigration and Registration of Persons)." },
+  { year: "2013", title: "Sudan & Jazz Pakistan", body: "Consultancy for Sudan Civil Registration System; delivery of biometric verification system for Jazz (Pakistan)." },
+  { year: "2015", title: "PITB Attendance rollout", body: "Biometric attendance system deployed across district and tehsil hospitals for the Punjab Information Technology Board." },
+  { year: "2016", title: "PTA Technical Audit", body: "Awarded the Technical Audit of Mobile Subscriber Data of Cellular Mobile Operators across Pakistan." },
+  { year: "2017", title: "Biometric polling pilot", body: "Pakistan's first-ever biometric-verified polling pilot — NA-120 by-election — under the Election Commission of Pakistan." },
+  { year: "2018", title: "ID4Africa, Abuja", body: "Exhibited at the ID4Africa Annual Meeting in Abuja, Nigeria, expanding footprint across the continent." },
+  { year: "2020", title: "New HQ, Islamabad", body: "Groundbreaking of the new Secure Tech headquarters in Sector I-9/3, Islamabad — a hub for R&D and delivery." },
   { year: "2024", title: "Global footprint", body: "Solutions live across Pakistan, Iraq, Kenya, Sudan and Nigeria with 20+ government programmes." },
 ];
 
@@ -218,11 +226,16 @@ export function HomePage() {
           </Button>
         </div>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {products.slice(0, 4).map((p, i) => (
-            <Reveal key={p.name} delay={i * 60}>
-              <Card className="group h-full overflow-hidden border-border/70 hover:shadow-xl transition-all">
-                <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 via-secondary to-accent/10 grid place-items-center relative overflow-hidden">
-                  <Fingerprint className="h-20 w-20 text-primary/40 group-hover:scale-110 transition-transform" />
+          {products.map((p, i) => (
+            <Reveal key={p.name} delay={i * 50}>
+              <Card className="group h-full overflow-hidden border-border/70 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="aspect-[4/3] bg-gradient-to-br from-secondary via-background to-accent/5 grid place-items-center relative overflow-hidden p-6">
+                  <img
+                    src={p.img}
+                    alt={`${p.name} biometric device`}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-md"
+                  />
                   <span className="absolute top-3 left-3 rounded-full bg-primary text-primary-foreground text-[10px] font-semibold uppercase tracking-wider px-2 py-1">
                     {p.name}
                   </span>
