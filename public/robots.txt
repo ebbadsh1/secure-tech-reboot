@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://secure-tech-reboot.lovable.app/sitemap.xml
