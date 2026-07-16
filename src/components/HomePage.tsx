@@ -221,8 +221,8 @@ export function HomePage() {
               A trusted range of fingerprint and facial recognition devices deployed in the toughest field conditions.
             </p>
           </Reveal>
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            View All Products <ArrowRight className="ml-2 h-4 w-4" />
+          <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <Link to="/products">View All Products <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </Button>
         </div>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
