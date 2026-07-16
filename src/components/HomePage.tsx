@@ -24,14 +24,14 @@ const services = [
 ];
 
 const products = [
-  { name: "TPS 360c", tag: "Compact biometric terminal for retail and field agents." },
-  { name: "TPS 900", tag: "High-performance fingerprint verification terminal." },
-  { name: "TPS 980", tag: "Facial recognition terminal for premium access control." },
-  { name: "TPS 950", tag: "Facial recognition with dual-camera liveness detection." },
-  { name: "TPS 550s", tag: "Integrated-camera terminal for enrolment and verification." },
-  { name: "TPS 470", tag: "Rugged biometric tablet for mobile field operations." },
-  { name: "TPS 550", tag: "Reliable multi-modal verification workhorse." },
-  { name: "TPS 350", tag: "Entry-level, cost-effective fingerprint device." },
+  { name: "TPS 360c", tag: "Handheld fingerprint terminal for 1:1 NADRA verification.", img: "https://www.securetech-consultancy.com/assets/images/products/360.png" },
+  { name: "TPS 900", tag: "High-performance handheld fingerprint verification terminal.", img: "https://www.securetech-consultancy.com/assets/images/products/900.png" },
+  { name: "TPS 980", tag: "Facial recognition terminal for access control and MFS.", img: "https://www.securetech-consultancy.com/assets/images/products/980.png" },
+  { name: "TPS 950", tag: "Facial recognition device with high-throughput matching.", img: "https://www.securetech-consultancy.com/assets/images/products/950.png" },
+  { name: "TPS 550s", tag: "Handheld terminal with integrated camera for photograph capture.", img: "https://www.securetech-consultancy.com/assets/images/products/550s.png" },
+  { name: "TPS 470", tag: "Rugged biometric tablet for mobile field operations.", img: "https://www.securetech-consultancy.com/assets/images/products/470.png" },
+  { name: "TPS 550", tag: "Reliable handheld biometric verification workhorse.", img: "https://www.securetech-consultancy.com/assets/images/products/550.png" },
+  { name: "TPS 350", tag: "Compact, cost-effective handheld fingerprint device.", img: "https://www.securetech-consultancy.com/assets/images/products/350.png" },
 ];
 
 const industries = [
