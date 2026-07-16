@@ -127,10 +127,10 @@ export function HomePage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-accent hover:bg-accent-dark text-accent-foreground">
-                <a href="#contact">Request a Demo <ArrowRight className="ml-2 h-4 w-4" /></a>
+                <Link to="/contact">Request a Demo <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10">
-                <a href="#services">Explore Solutions</a>
+                <Link to="/solutions">Explore Solutions</Link>
               </Button>
             </div>
           </div>
@@ -221,8 +221,8 @@ export function HomePage() {
               A trusted range of fingerprint and facial recognition devices deployed in the toughest field conditions.
             </p>
           </Reveal>
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            View All Products <ArrowRight className="ml-2 h-4 w-4" />
+          <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <Link to="/products">View All Products <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </Button>
         </div>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

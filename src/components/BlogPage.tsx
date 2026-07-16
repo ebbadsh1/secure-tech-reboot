@@ -1,52 +1,9 @@
 import { ArrowRight, Calendar, Download, FileText, Award, ShieldCheck } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Reveal } from "./Reveal";
-
-const posts = [
-  {
-    title: "The state of biometric identity in South Asia",
-    excerpt: "Fingerprint verification has moved from ID cards to SIMs, banking and elections. Where next?",
-    date: "May 12, 2026",
-    img: "https://images.unsplash.com/photo-1633265486064-086b219458ec?auto=format&fit=crop&w=1200&q=70",
-    tag: "Biometrics",
-  },
-  {
-    title: "Designing e-governance that citizens actually use",
-    excerpt: "Lessons from a decade of building population registration and entitlement platforms.",
-    date: "April 28, 2026",
-    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=70",
-    tag: "e-Governance",
-  },
-  {
-    title: "HSMs and why your biometric database needs one",
-    excerpt: "A practical primer on hardware security modules for teams shipping identity systems.",
-    date: "April 09, 2026",
-    img: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1200&q=70",
-    tag: "Security",
-  },
-  {
-    title: "Building Android apps for field agents in low-connectivity areas",
-    excerpt: "Offline-first patterns for telecom verification and cash disbursement apps.",
-    date: "March 22, 2026",
-    img: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=1200&q=70",
-    tag: "Mobile",
-  },
-  {
-    title: "Smart cards vs. mobile credentials: a 2026 view",
-    excerpt: "Where physical cards still win — and where mobile-first identity has clearly taken over.",
-    date: "March 04, 2026",
-    img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=70",
-    tag: "Identity",
-  },
-  {
-    title: "Inside our biometric voting pilot",
-    excerpt: "What we learned deploying the first HSM-backed biometric polling system in Pakistan.",
-    date: "February 18, 2026",
-    img: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=70",
-    tag: "Elections",
-  },
-];
+import { POSTS } from "@/data/posts";
 
 const certifications = [
   { name: "ISO 9001", desc: "Quality Management" },
@@ -56,28 +13,17 @@ const certifications = [
 ];
 
 const downloads = [
-  "TPS 360c Datasheet",
-  "TPS 900 Datasheet",
-  "TPS 980 Facial Recognition Brochure",
-  "TPS 950 Facial Recognition Brochure",
-  "TPS 550s Integrated Camera Datasheet",
-  "TPS 470 Biometric Tablet Brochure",
-  "SecureTech Company Profile",
-  "Case Study: Biometric SIM Issuance",
+  "TPS 360c Datasheet", "TPS 900 Datasheet", "TPS 980 Facial Recognition Brochure",
+  "TPS 950 Facial Recognition Brochure", "TPS 550s Integrated Camera Datasheet",
+  "TPS 470 Biometric Tablet Brochure", "SecureTech Company Profile", "Case Study: Biometric SIM Issuance",
 ];
 
 export function BlogPage() {
   return (
     <>
       <section className="relative bg-primary text-primary-foreground overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-25"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=70')",
-            backgroundSize: "cover", backgroundPosition: "center",
-          }}
-          aria-hidden
-        />
+        <div className="absolute inset-0 opacity-25"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=70')", backgroundSize: "cover", backgroundPosition: "center" }} aria-hidden />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/70" aria-hidden />
         <div className="container-page relative py-20 md:py-28">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-xs font-medium">
@@ -92,24 +38,26 @@ export function BlogPage() {
 
       <section className="container-page py-20 md:py-24">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((p, i) => (
-            <Reveal key={p.title} delay={i * 60}>
-              <Card className="group h-full overflow-hidden border-border/70 hover:shadow-xl transition-all">
-                <div className="aspect-video overflow-hidden">
-                  <img src={p.img} alt={p.title} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="rounded-full bg-accent/15 px-2 py-0.5 font-semibold text-accent-dark uppercase tracking-wider">{p.tag}</span>
-                    <span className="inline-flex items-center gap-1 text-muted-foreground"><Calendar className="h-3 w-3" /> {p.date}</span>
+          {POSTS.map((p, i) => (
+            <Reveal key={p.slug} delay={i * 60}>
+              <Link to="/blog/$slug" params={{ slug: p.slug }} className="block h-full">
+                <Card className="group h-full overflow-hidden border-border/70 hover:shadow-xl transition-all">
+                  <div className="aspect-video overflow-hidden">
+                    <img src={p.img} alt={p.title} loading="lazy" width={600} height={338} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
-                  <h3 className="mt-3 font-display text-lg font-semibold leading-snug">{p.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.excerpt}</p>
-                  <Button variant="ghost" className="mt-3 px-0 text-primary hover:text-primary hover:bg-transparent">
-                    Read More <ArrowRight className="ml-1.5 h-4 w-4" />
-                  </Button>
-                </CardContent>
-              </Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="rounded-full bg-accent/15 px-2 py-0.5 font-semibold text-accent-dark uppercase tracking-wider">{p.tag}</span>
+                      <span className="inline-flex items-center gap-1 text-muted-foreground"><Calendar className="h-3 w-3" /> {p.date}</span>
+                    </div>
+                    <h3 className="mt-3 font-display text-lg font-semibold leading-snug group-hover:text-primary transition-colors">{p.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.excerpt}</p>
+                    <span className="mt-3 inline-flex items-center text-sm text-primary font-medium">
+                      Read More <ArrowRight className="ml-1.5 h-4 w-4" />
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
             </Reveal>
           ))}
         </div>
