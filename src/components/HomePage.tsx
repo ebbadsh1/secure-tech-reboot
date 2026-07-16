@@ -226,11 +226,16 @@ export function HomePage() {
           </Button>
         </div>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {products.slice(0, 4).map((p, i) => (
-            <Reveal key={p.name} delay={i * 60}>
-              <Card className="group h-full overflow-hidden border-border/70 hover:shadow-xl transition-all">
-                <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 via-secondary to-accent/10 grid place-items-center relative overflow-hidden">
-                  <Fingerprint className="h-20 w-20 text-primary/40 group-hover:scale-110 transition-transform" />
+          {products.map((p, i) => (
+            <Reveal key={p.name} delay={i * 50}>
+              <Card className="group h-full overflow-hidden border-border/70 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="aspect-[4/3] bg-gradient-to-br from-secondary via-background to-accent/5 grid place-items-center relative overflow-hidden p-6">
+                  <img
+                    src={p.img}
+                    alt={`${p.name} biometric device`}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-md"
+                  />
                   <span className="absolute top-3 left-3 rounded-full bg-primary text-primary-foreground text-[10px] font-semibold uppercase tracking-wider px-2 py-1">
                     {p.name}
                   </span>
