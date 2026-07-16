@@ -47,24 +47,28 @@ const caseStudies = [
   {
     tag: "Telecom",
     title: "Biometric-Based SIM Issuance",
-    body: "NADRA-integrated retailer and device verification enabling nationwide compliant SIM activation across leading operators.",
+    body: "Turnkey front-end and NADRA-integrated middleware for real-time SIM verification and issuance — retailer, device and fingerprint management.",
     img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=70",
   },
   {
     tag: "Elections",
     title: "Biometric Voter Verification",
-    body: "Pakistan's first HSM-secured biometric polling pilot deployed for the NA-120 by-election with real-time authentication.",
+    body: "HSM-secured voter verification device deployed for Pakistan's first biometric-verified polling pilot (NA-120, Election Commission of Pakistan).",
     img: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=70",
   },
   {
-    tag: "Banking",
-    title: "Smart Debit Card, Iraq",
-    body: "National smart debit card programme integrating biometrics for secure issuance, activation and transaction authorization.",
+    tag: "Banking · Iraq",
+    title: "Smart Debit Card System",
+    body: "End-to-end biometric-enabled payment programme for International Smart Card — enrolment, POS integration and secure disbursement of government grants.",
     img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=70",
   },
 ];
 
-const customers = ["Ufone", "Jazz", "Zong", "Telenor", "Warid", "PTCL", "PTA", "PITB", "Pakistan Army", "Govt. of Pakistan", "NayaPay", "Karandaz"];
+const customers = [
+  "Ufone", "Jazz", "Zong", "Telenor", "Warid", "PTCL",
+  "PTA", "PITB", "Pakistan Army", "Govt. of Pakistan", "U Bank", "NSRP",
+  "IPRS Kenya", "KPLC Kenya", "ISC Iraq", "Korek Telecom", "Ministry of Interior, Sudan", "PMD",
+];
 
 const testimonials = [
   { quote: "Their biometric verification stack has been the backbone of our nationwide SIM compliance operations for years — rock solid and fast.", role: "Telecom Operations Director" },
@@ -80,11 +84,15 @@ const awards = [
 ];
 
 const timeline = [
-  { year: "2009", title: "Founded in Islamabad", body: "Secure Tech Consultancy opens its doors, focused on identity and security systems integration." },
-  { year: "2011", title: "Iraq & Pakistan Army programmes", body: "National Entitlement enrolment system in Iraq and Smart Card ID for Pakistan Army delivered." },
-  { year: "2012", title: "Kenya Population Registration", body: "Consultancy engagement for national population registration modernization." },
-  { year: "2017", title: "Biometric polling pilot", body: "First-ever biometric-verified polling pilot in Pakistan with the Election Commission of Pakistan." },
-  { year: "2020", title: "New HQ, Islamabad", body: "Groundbreaking of the new Secure Tech headquarters — a hub for R&D and delivery." },
+  { year: "2009", title: "Founded in Islamabad", body: "Secure Tech Consultancy opens its doors with a mission to solve business challenges with identity and security technology." },
+  { year: "2011", title: "Iraq & Pakistan Army programmes", body: "Enrolment software and system integration for Iraq's National Entitlement Program; Smart Card ID system delivered for Pakistan Army." },
+  { year: "2012", title: "Kenya Population Registration", body: "Consultancy services for Kenya's Integrated Population Registration System (Ministry of State for Immigration and Registration of Persons)." },
+  { year: "2013", title: "Sudan & Jazz Pakistan", body: "Consultancy for Sudan Civil Registration System; delivery of biometric verification system for Jazz (Pakistan)." },
+  { year: "2015", title: "PITB Attendance rollout", body: "Biometric attendance system deployed across district and tehsil hospitals for the Punjab Information Technology Board." },
+  { year: "2016", title: "PTA Technical Audit", body: "Awarded the Technical Audit of Mobile Subscriber Data of Cellular Mobile Operators across Pakistan." },
+  { year: "2017", title: "Biometric polling pilot", body: "Pakistan's first-ever biometric-verified polling pilot — NA-120 by-election — under the Election Commission of Pakistan." },
+  { year: "2018", title: "ID4Africa, Abuja", body: "Exhibited at the ID4Africa Annual Meeting in Abuja, Nigeria, expanding footprint across the continent." },
+  { year: "2020", title: "New HQ, Islamabad", body: "Groundbreaking of the new Secure Tech headquarters in Sector I-9/3, Islamabad — a hub for R&D and delivery." },
   { year: "2024", title: "Global footprint", body: "Solutions live across Pakistan, Iraq, Kenya, Sudan and Nigeria with 20+ government programmes." },
 ];
 
